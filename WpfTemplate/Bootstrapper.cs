@@ -7,11 +7,10 @@ namespace WpfTemplate
 {
     class Bootstrapper : UnityBootstrapper
     {
-        protected override DependencyObject CreateShell() => Container.Resolve<MainWindow>();
+        protected override DependencyObject CreateShell()
+            => Container.Resolve<MainWindow>();
 
         protected override void InitializeShell()
-        {
-            Application.Current.MainWindow.Show();
-        }
+            => Application.Current.MainWindow.Show();   
     }
 }
