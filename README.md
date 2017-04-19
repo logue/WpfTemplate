@@ -12,12 +12,12 @@ PrismやReactiveProperty、MahAppsを利用したMVVM開発を行う際のテン
 
 |ライブラリ名|作者様|ライセンス|URL
 :-:|:-:|:-:|:-:
+Autofac|Autofac Project|MIT|https://autofac.org/
 CommonServiceLocator|Microsoft|Ms-PL|http://commonservicelocator.codeplex.com/
 MahApps.Metro|Jan Karger, Dennis Daume, Brendan Forster, Paul Jenkins, Jake Ginnivan, Alex Mitchell|MIT|https://github.com/MahApps/MahApps.Metro
 Prism|Brian Lagunas, Brian Noyes|Apache 2.0|https://github.com/PrismLibrary/Prism
 ReactiveProperty|neuecc, xin9le, okazuki|MIT|https://github.com/runceel/ReactiveProperty
 Reactive Extensions|.NET Foundation and Contributors|Apache 2.0|https://github.com/Reactive-Extensions/Rx.NET
-Unity|Microsoft|Apache 2.0|http://unity.codeplex.com/
 
 ## 作者
 

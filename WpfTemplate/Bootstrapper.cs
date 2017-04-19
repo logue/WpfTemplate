@@ -1,11 +1,11 @@
-﻿using WpfTemplate.Views;
-using Microsoft.Practices.Unity;
-using Prism.Unity;
+﻿using Autofac;
+using Prism.Autofac;
 using System.Windows;
+using WpfTemplate.Views;
 
 namespace WpfTemplate
 {
-    class Bootstrapper : UnityBootstrapper
+    class Bootstrapper : AutofacBootstrapper
     {
         protected override DependencyObject CreateShell()
             => Container.Resolve<MainWindow>();
