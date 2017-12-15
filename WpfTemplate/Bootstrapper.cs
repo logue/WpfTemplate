@@ -11,6 +11,6 @@ namespace WpfTemplate
             => Container.Resolve<MainWindow>();
 
         protected override void InitializeShell()
-            => Application.Current.MainWindow.Show();   
+            => Application.Current.MainWindow.Show();
     }
 }
