@@ -26,8 +26,10 @@ PrismやUnity、MahAppsを利用したMVVM開発を行う際のテンプレー�
 
 ## スクリーンショット
 
-![日本語の例](https://github.com/logue/WpfTemplate/raw/master/WpfTemplate/image/ss1.png)
-![英語表記にした例](https://github.com/logue/WpfTemplate/raw/master/WpfTemplate/image/ss2.png)
+![日本語の例](https://github.com/logue/WpfTemplate/raw/master/image/ss1.png)
+![英語表記にした例](https://github.com/logue/WpfTemplate/raw/master/image/ss2.png)
+![設定フライアウト](https://github.com/logue/WpfTemplate/raw/master/image/ss3.png)
+![情報画面](https://github.com/logue/WpfTemplate/raw/master/image/ss4.png)
 
 ## 作者
 
