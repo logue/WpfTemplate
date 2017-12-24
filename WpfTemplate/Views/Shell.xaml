@@ -1,0 +1,47 @@
+﻿<Metro:MetroWindow x:Class="WpfTemplate.Views.Shell"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:Metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   xmlns:prism="http://www.codeplex.com/prism"
+                   xmlns:lex="http://wpflocalizeextension.codeplex.com"
+                   xmlns:local="clr-namespace:WpfTemplate"
+                   xmlns:infConstants="clr-namespace:WpfTemplate.Constants"
+                   xmlns:infBehaviors="clr-namespace:WpfTemplate.Behaviors"
+                   lex:LocalizeDictionary.DesignCulture="ja"
+                   lex:ResxLocalizationProvider.DefaultAssembly="WpfTemplate"
+                   lex:ResxLocalizationProvider.DefaultDictionary="Resources"
+                   prism:ViewModelLocator.AutoWireViewModel="True"
+                   mc:Ignorable="d"
+                   ResizeMode="CanResizeWithGrip"
+                   GlowBrush="{DynamicResource AccentColorBrush}"
+                   NonActiveGlowBrush="#CDFF0000"
+                   ShowIconOnTitleBar="True"
+                   Title="{Binding Title}"
+                   Height="350" Width="525">
+    <!-- RightWindow Commands -->
+    <Metro:MetroWindow.RightWindowCommands>
+        <Metro:WindowCommands x:Name="rightWindowCommandsRegion" />
+    </Metro:MetroWindow.RightWindowCommands>
+    <!-- Flyouts -->
+    <Metro:MetroWindow.Flyouts>
+        <Metro:FlyoutsControl x:Name="flyoutsControlRegion" />
+    </Metro:MetroWindow.Flyouts>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!-- Main-Region -->
+        <ItemsControl Grid.Row="0" prism:RegionManager.RegionName="{x:Static infConstants:RegionNames.MainRegion}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+        <!-- StatusBar -->
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>PrismMahApps Template Application</StatusBarItem>
+            <Separator Style="{StaticResource MetroStatusBarSeparator}" />
+            <StatusBarItem Content="{lex:Loc ShellStatusBarMessage}" />
+            <StatusBarItem Content="{Binding Path=StatusBarMessage, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" />
+        </StatusBar>
+    </Grid>
+</Metro:MetroWindow>

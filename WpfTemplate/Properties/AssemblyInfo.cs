@@ -7,19 +7,19 @@ using System.Windows;
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("WpfTemplate")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WpfTemplate")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly : AssemblyTitle ("WpfTemplate")]
+[assembly : AssemblyDescription ("")]
+[assembly : AssemblyConfiguration ("")]
+[assembly : AssemblyCompany ("")]
+[assembly : AssemblyProduct ("WpfTemplate")]
+[assembly : AssemblyCopyright ("Copyright ©  2017")]
+[assembly : AssemblyTrademark ("")]
+[assembly : AssemblyCulture ("")]
 
 // ComVisible を false に設定すると、その型はこのアセンブリ内で COM コンポーネントから
 // 参照不可能になります。COM からこのアセンブリ内の型にアクセスする場合は、
 // その型の ComVisible 属性を true に設定してください。
-[assembly: ComVisible(false)]
+[assembly : ComVisible (false)]
 
 //ローカライズ可能なアプリケーションのビルドを開始するには、
 //.csproj ファイルの <UICulture>CultureYouAreCodingWith</UICulture> を
@@ -28,18 +28,16 @@ using System.Windows;
 //下の NeutralResourceLanguage 属性のコメントを解除します。下の行の "en-US" を
 //プロジェクト ファイルの UICulture 設定と一致するよう更新します。
 
-//[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
+//[assembly: NeutralResourcesLanguage("ja", UltimateResourceFallbackLocation.Satellite)]
 
-
-[assembly: ThemeInfo(
+[assembly : ThemeInfo (
     ResourceDictionaryLocation.None, //テーマ固有のリソース ディクショナリが置かれている場所
-                                     //(リソースがページ、
-                                     //またはアプリケーション リソース ディクショナリに見つからない場合に使用されます)
+    //(リソースがページ、
+    //またはアプリケーション リソース ディクショナリに見つからない場合に使用されます)
     ResourceDictionaryLocation.SourceAssembly //汎用リソース ディクショナリが置かれている場所
-                                              //(リソースがページ、
-                                              //アプリケーション、またはいずれのテーマ固有のリソース ディクショナリにも見つからない場合に使用されます)
+    //(リソースがページ、
+    //アプリケーション、またはいずれのテーマ固有のリソース ディクショナリにも見つからない場合に使用されます)
 )]
-
 
 // アセンブリのバージョン情報は次の 4 つの値で構成されています:
 //
@@ -51,5 +49,5 @@ using System.Windows;
 // すべての値を指定するか、下のように '*' を使ってビルドおよびリビジョン番号を 
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly : AssemblyVersion ("1.0.0.0")]
+[assembly : AssemblyFileVersion ("1.0.0.0")]

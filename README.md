@@ -1,28 +1,39 @@
 # WpfTemplate
 
-WPFアプリケーションのテンプレートです。
+SurfLapras氏のテンプレートをベースに色々拡張したMVVMなWPFアプリケーションのテンプレートです。
 
 ## 説明
 
-PrismやReactiveProperty、MahAppsを利用したMVVM開発を行う際のテンプレートとしてお使いください。
+PrismやUnity、MahAppsを利用したMVVM開発を行う際のテンプレートとしてお使いください。最低限の機能として、フライアウト、テーマの動的切り替え、色の動的切り替え、言語の動的切替、情報ダイアログ（プロジェクトのアセンブリより取得）する機能が予め入っています。
 
 ## 使用ライブラリ（順不同）
 
 本アプリケーションは、以下のライブラリを使用しています。このような素晴らしいライブラリを作成・公開されている方々に感謝します。
 
-|ライブラリ名|作者様|ライセンス|URL
-:-:|:-:|:-:|:-:
-Autofac|Autofac Project|MIT|https://autofac.org/
-CommonServiceLocator|Microsoft|Ms-PL|http://commonservicelocator.codeplex.com/
-MahApps.Metro|Jan Karger, Dennis Daume, Brendan Forster, Paul Jenkins, Jake Ginnivan, Alex Mitchell|MIT|https://github.com/MahApps/MahApps.Metro
-Prism|Brian Lagunas, Brian Noyes|Apache 2.0|https://github.com/PrismLibrary/Prism
-ReactiveProperty|neuecc, xin9le, okazuki|MIT|https://github.com/runceel/ReactiveProperty
-Reactive Extensions|.NET Foundation and Contributors|Apache 2.0|https://github.com/Reactive-Extensions/Rx.NET
+|ライブラリ名           |作者様           |ライセンス|URL
+|-----------------------|-----------------|----------|-----
+|MahApps.Metro          |Jan Karger, Dennis Daume, Brendan Forster, Paul Jenkins, Jake Ginnivan, Alex Mitchell|MIT|<http://mahapps.com/>
+|MahApps.Metro.IconPacks|同上             |同上      |<https://github.com/MahApps/MahApps.Metro.IconPacks>
+|Prism.Unity            |Brian Lagunas, Brian Noyes|Apache 2.0|<https://github.com/PrismLibrary>
+|WpfLocalizeExtension   |Bernhard Millauer|Microsoft Public License|<https://github.com/SeriousM/WPFLocalizationExtension>
+
+このテンプレートを作る上で[PrismMahAppsSample](https://github.com/steve600/PrismMahAppsSample)を参考にしました。
+
+## Tips
+
+* アイコンは全種類入れてありますが、実際使う上では使うセットは制限しましょう。
+* 多言語化は、リソースファイルで行いますが、ResXFileCodeGeneratorを機能拡張からインストールすると、キーと原文と翻訳文を一度に編集できるのでおすすめです。
+
+## スクリーンショット
+
+![日本語の例](https://github.com/logue/WpfTemplate/raw/master/WpfTemplate/image/ss1.png)
+![英語表記にした例](https://github.com/logue/WpfTemplate/raw/master/WpfTemplate/image/ss2.png)
 
 ## 作者
 
-Twitter [@_SurfLapras](https://twitter.com/_SurfLapras)
+[@logue256](https://twitter.com/logue256)
+[@_SurfLapras](https://twitter.com/_SurfLapras)
 
 ## ライセンス
 
-MIT
+[MIT](LICENSE)
