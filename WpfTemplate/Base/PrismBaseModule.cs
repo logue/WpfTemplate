@@ -2,7 +2,8 @@
 using Prism.Modularity;
 using Prism.Regions;
 
-namespace WpfTemplate.Base {
+namespace WpfTemplate.Base
+{
     public abstract class PrismBaseModule : IModule {
         #region Ctor
 

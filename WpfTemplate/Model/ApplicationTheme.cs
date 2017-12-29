@@ -3,34 +3,34 @@ using Prism.Mvvm;
 
 namespace WpfTemplate.Model {
     public class ApplicationTheme : BindableBase {
-        private string name;
+        private string _name;
 
         /// <summary>
         /// Name
         /// </summary>
         public string Name {
-            get { return name; }
-            set { this.SetProperty<string> (ref this.name, value); }
+            get { return _name; }
+            set { SetProperty<string> (ref _name, value); }
         }
 
-        private Brush colorBrush;
+        private Brush _colorBrush;
 
         /// <summary>
         /// The color brush
         /// </summary>
         public Brush ColorBrush {
-            get { return colorBrush; }
-            set { this.SetProperty<Brush> (ref this.colorBrush, value); }
+            get { return _colorBrush; }
+            set { SetProperty<Brush> (ref _colorBrush, value); }
         }
 
-        private Brush borderColorBrush;
+        private Brush _borderColorBrush;
 
         /// <summary>
         /// The border color brush
         /// </summary>
         public Brush BorderColorBrush {
-            get { return borderColorBrush; }
-            set { this.SetProperty<Brush> (ref this.borderColorBrush, value); }
+            get { return _borderColorBrush; }
+            set { SetProperty<Brush> (ref _borderColorBrush, value); }
         }
     }
 }

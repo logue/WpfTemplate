@@ -1,21 +1,30 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
+using System.Diagnostics;
 using System.Linq;
-using WpfTemplate.Interfaces;
 using WPFLocalizeExtension.Engine;
 using WPFLocalizeExtension.Extensions;
+using WpfTemplate.Interfaces;
 
-namespace WpfTemplate.Services {
+namespace WpfTemplate.Services
+{
     public class LocalizerService : ILocalizerService {
         /// <summary>
         /// Ctor
         /// </summary>
         /// <param name="culture"></param>
-        public LocalizerService (string culture) {
-            this.SupportedLanguages = CultureInfo.GetCultures (CultureTypes.AllCultures).Where (c => c.IetfLanguageTag.Equals ("ja-JP") ||
-                    c.IetfLanguageTag.Equals ("en-US"))
+        public LocalizerService (string locale = null) {
+            if (locale == null)
+            {
+                locale = CultureInfo.CurrentCulture.ToString();
+                Debug.Write(locale);
+            }
+
+            SupportedLanguages = CultureInfo.GetCultures(CultureTypes.AllCultures).Where (
+                c => c.IetfLanguageTag.Equals("ja-JP") ||
+                     c.IetfLanguageTag.Equals("en"))
                 .ToList<CultureInfo> ();
-            this.SetLocale (culture);
+            SetLocale(locale);
         }
 
         /// <summary>

@@ -1,7 +1,8 @@
-﻿using System.Windows.Media;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
+using System.Windows.Media;
 
-namespace WpfTemplate.Base {
+namespace WpfTemplate.Base
+{
     public abstract class ViewModelDialogPopupBase : BindableBase {
         /// <summary>
         /// View title

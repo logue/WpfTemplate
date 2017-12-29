@@ -5,10 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:lex="http://wpflocalizeextension.codeplex.com"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:local="clr-namespace:WpfTemplate.Views"
              lex:LocalizeDictionary.DesignCulture="ja"
              lex:ResxLocalizationProvider.DefaultAssembly="WpfTemplate"
              lex:ResxLocalizationProvider.DefaultDictionary="Resources"
-             xmlns:local="clr-namespace:WpfTemplate.Views"
              mc:Ignorable="d" 
              MinHeight="300"
              d:DesignHeight="300" d:DesignWidth="300">

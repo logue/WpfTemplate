@@ -3,7 +3,8 @@ using Prism.Logging;
 using WpfTemplate.Base;
 using WpfTemplate.Events;
 
-namespace WpfTemplate.ViewModels {
+namespace WpfTemplate.ViewModels
+{
     public class ShellViewModel : ViewModelBase {
         /// <summary>
         /// CTOR

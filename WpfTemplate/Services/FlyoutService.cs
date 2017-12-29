@@ -1,12 +1,14 @@
-﻿using System.Linq;
-using System.Windows.Input;
-using MahApps.Metro.Controls;
+﻿using MahApps.Metro.Controls;
 using Prism.Commands;
 using Prism.Regions;
+using System.Linq;
+using System.Windows.Input;
+using WpfTemplate.Base;
 using WpfTemplate.Constants;
 using WpfTemplate.Interfaces;
 
-namespace WpfTemplate.Services {
+namespace WpfTemplate.Services
+{
     public class FlyoutService : IFlyoutService {
         IRegionManager _regionManager;
 

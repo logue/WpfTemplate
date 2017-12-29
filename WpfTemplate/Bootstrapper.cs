@@ -1,18 +1,17 @@
-﻿using System;
-using System.Windows;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
 using Prism.Logging;
 using Prism.Modularity;
 using Prism.Regions;
 using Prism.Unity;
+using System.Windows;
 using WpfTemplate.Base;
 using WpfTemplate.Constants;
 using WpfTemplate.Interfaces;
-using WpfTemplate.Model;
 using WpfTemplate.Services;
 using WpfTemplate.Views;
 
-namespace WpfTemplate {
+namespace WpfTemplate
+{
     public class Bootstrapper : UnityBootstrapper {
         /// <summary>
         /// The shell object
@@ -59,7 +58,7 @@ namespace WpfTemplate {
             // Localizer service
             Container.RegisterInstance (typeof (ILocalizerService),
                 ServiceNames.LocalizerService,
-                new LocalizerService ("ja-JP"),
+                new LocalizerService (),
                 new ContainerControlledLifetimeManager ());
         }
 

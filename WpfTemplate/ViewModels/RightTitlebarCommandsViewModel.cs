@@ -1,12 +1,13 @@
-﻿using System.Windows.Input;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
 using Prism.Commands;
+using System.Windows.Input;
 using WpfTemplate.Base;
 using WpfTemplate.Constants;
 using WpfTemplate.Interfaces;
 using WpfTemplate.Model;
 
-namespace WpfTemplate.ViewModels {
+namespace WpfTemplate.ViewModels
+{
     public class RightTitlebarCommandsViewModel : ViewModelBase {
         public RightTitlebarCommandsViewModel () {
             // Initialize commands

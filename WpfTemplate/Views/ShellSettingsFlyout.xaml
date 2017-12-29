@@ -7,15 +7,15 @@
               xmlns:prism="http://www.codeplex.com/prism"
               xmlns:lex="http://wpflocalizeextension.codeplex.com"
               xmlns:local="clr-namespace:WpfTemplate.Views"
+              prism:ViewModelLocator.AutoWireViewModel="True"
               lex:LocalizeDictionary.DesignCulture="ja"        
               lex:ResxLocalizationProvider.DefaultAssembly="WpfTemplate"
               lex:ResxLocalizationProvider.DefaultDictionary="Resources"
-              prism:ViewModelLocator.AutoWireViewModel="True"
               mc:Ignorable="d" 
               Theme="Accent"
               Position="Right"
               Header="{lex:Loc ShellSettings}"
-              Width="250"
+              AreAnimationsEnabled="True"
               d:DesignHeight="300" d:DesignWidth="300">
     <Grid Margin="5">
         <Grid.ColumnDefinitions>
@@ -42,7 +42,6 @@
                   ItemsSource="{Binding Path=ApplicationThemes, UpdateSourceTrigger=PropertyChanged}"
                   DisplayMemberPath="Name" 
                   SelectedItem="{Binding Path=SelectedTheme, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
-
         <!-- Accent -->
         <TextBlock Grid.Column="0"
                    Grid.Row="2"
@@ -53,7 +52,6 @@
                   ItemsSource="{Binding Path=AccentColors, UpdateSourceTrigger=PropertyChanged}"
                   DisplayMemberPath="Name" 
                   SelectedItem="{Binding Path=SelectedAccentColor, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
-
         <!-- Language -->
         <TextBlock Grid.Column="0"
                    Grid.Row="4"
@@ -64,6 +62,5 @@
                   ItemsSource="{Binding Path=SupportedLanguages, UpdateSourceTrigger=PropertyChanged}"
                   DisplayMemberPath="DisplayName" 
                   SelectedItem="{Binding Path=SelectedLanguage, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
-
     </Grid>
 </Metro:Flyout>

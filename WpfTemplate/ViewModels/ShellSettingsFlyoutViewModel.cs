@@ -1,18 +1,19 @@
-﻿using System;
+﻿using MahApps.Metro;
+using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media;
-using MahApps.Metro;
-using Microsoft.Practices.Unity;
 using WpfTemplate.Base;
 using WpfTemplate.Constants;
 using WpfTemplate.Events;
 using WpfTemplate.Interfaces;
 using WpfTemplate.Model;
 
-namespace WpfTemplate.ViewModels {
+namespace WpfTemplate.ViewModels
+{
     public class ShellSettingsFlyoutViewModel : ViewModelBase {
         private ILocalizerService localizerService = null;
 
@@ -34,8 +35,9 @@ namespace WpfTemplate.ViewModels {
                 .Select (a => new AccentColor () { Name = a.Name, ColorBrush = a.Resources["AccentColorBrush"] as Brush })
                 .ToList ();
 
-            SelectedTheme = ApplicationThemes.FirstOrDefault ();
-            SelectedAccentColor = AccentColors.Where (c => c.Name.Equals ("Cyan")).FirstOrDefault ();
+            SelectedTheme = ApplicationThemes.FirstOrDefault();
+            SelectedAccentColor = AccentColors.Where(c => c.Name.Equals ("Cyan")).FirstOrDefault();
+            SelectedLanguage = SupportedLanguages.Where(c => c.Name.Equals( CultureInfo.CurrentCulture.ToString())).FirstOrDefault();
         }
 
         #endregion CTOR

@@ -1,12 +1,13 @@
-﻿using System.Threading.Tasks;
-using System.Windows;
-using MahApps.Metro.Controls;
+﻿using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using Microsoft.Practices.Unity;
+using System.Threading.Tasks;
+using System.Windows;
 using WpfTemplate.Constants;
 using WpfTemplate.Interfaces;
 
-namespace WpfTemplate.Services {
+namespace WpfTemplate.Services
+{
     public class MetroMessageDisplayService : IMetroMessageDisplayService {
         /// <summary>
         /// CTOR

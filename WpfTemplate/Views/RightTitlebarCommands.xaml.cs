@@ -3,7 +3,7 @@
 namespace WpfTemplate.Views
 {
     /// <summary>
-    /// Interaktionslogik für RightTitlebarCommands.xaml
+    /// RightTitlebarCommands.xaml の相互作用ロジック
     /// </summary>
     public partial class RightTitlebarCommands : StackPanel
     {

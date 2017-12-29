@@ -1,6 +1,6 @@
 ﻿using Prism.Commands;
 
-namespace WpfTemplate {
+namespace WpfTemplate.Base {
     public static class ApplicationCommands {
         public static CompositeCommand ShowFlyoutCommand = new CompositeCommand ();
     }

@@ -2,22 +2,21 @@
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-            xmlns:prism="http://www.codeplex.com/prism"
-            prism:ViewModelLocator.AutoWireViewModel="True"
             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-            xmlns:local="clr-namespace:WpfTemplate.Views"
-            xmlns:constants="clr-namespace:WpfTemplate.Constants;assembly=WpfTemplate" 
-            xmlns:vm="clr-namespace:WpfTemplate.ViewModels;assembly=WpfTemplate" 
-            xmlns:inf="clr-namespace:WpfTemplate;assembly=WpfTemplate"
-            xmlns:lex="http://wpflocalizeextension.codeplex.com"
             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+            xmlns:lex="http://wpflocalizeextension.codeplex.com"
+            xmlns:prism="http://www.codeplex.com/prism"
+            xmlns:base="clr-namespace:WpfTemplate.Base"
+            xmlns:constants="clr-namespace:WpfTemplate.Constants" 
+            xmlns:local="clr-namespace:WpfTemplate.Views"
+            xmlns:vm="clr-namespace:WpfTemplate.ViewModels" 
+            prism:ViewModelLocator.AutoWireViewModel="True"
             lex:LocalizeDictionary.DesignCulture="ja"
             lex:ResxLocalizationProvider.DefaultAssembly="WpfTemplate"
             lex:ResxLocalizationProvider.DefaultDictionary="Resources"
             mc:Ignorable="d"
             VerticalAlignment="Center"
             d:DesignHeight="30" d:DesignWidth="300" Orientation="Horizontal">
-
     <Button Command="{Binding ShowAboutDialogCommand}">
         <StackPanel Orientation="Horizontal">
             <iconPacks:PackIconModern Kind="Information" />
@@ -26,7 +25,7 @@
                        Text="{lex:Loc ShellAbout}" />
         </StackPanel>
     </Button>
-    <Button Command="{x:Static inf:ApplicationCommands.ShowFlyoutCommand}"
+    <Button Command="{x:Static base:ApplicationCommands.ShowFlyoutCommand}"
             CommandParameter="{x:Static constants:FlyoutNames.ShellSettingsFlyout}">
         <StackPanel Orientation="Horizontal">
             <iconPacks:PackIconModern Kind="Settings" />

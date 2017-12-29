@@ -4,7 +4,8 @@ using Prism.Events;
 using Prism.Mvvm;
 using Prism.Regions;
 
-namespace WpfTemplate.Base {
+namespace WpfTemplate.Base
+{
     public abstract class ViewModelBase : BindableBase {
         public ViewModelBase () {
             Container = ServiceLocator.Current.GetInstance<IUnityContainer> ();
@@ -14,34 +15,34 @@ namespace WpfTemplate.Base {
 
         #region Properties
 
-        private IUnityContainer unityContainer;
+        private IUnityContainer _unityContainer;
 
         /// <summary>
         /// The unity container
         /// </summary>
         public IUnityContainer Container {
-            get { return unityContainer; }
-            private set { this.SetProperty<IUnityContainer> (ref this.unityContainer, value); }
+            get { return _unityContainer; }
+            private set { SetProperty<IUnityContainer> (ref _unityContainer, value); }
         }
 
-        private IRegionManager regionManager;
+        private IRegionManager _regionManager;
 
         /// <summary>
         /// The region manager
         /// </summary>
         public IRegionManager RegionManager {
-            get { return regionManager; }
-            private set { this.SetProperty<IRegionManager> (ref this.regionManager, value); }
+            get { return _regionManager; }
+            private set { SetProperty<IRegionManager> (ref _regionManager, value); }
         }
 
-        private IEventAggregator eventAggregator;
+        private IEventAggregator _eventAggregator;
 
         /// <summary>
         /// The EventAggregator
         /// </summary>
         public IEventAggregator EventAggregator {
-            get { return eventAggregator; }
-            private set { this.SetProperty<IEventAggregator> (ref this.eventAggregator, value); }
+            get { return _eventAggregator; }
+            private set { SetProperty<IEventAggregator> (ref _eventAggregator, value); }
         }
 
         #endregion Properties
