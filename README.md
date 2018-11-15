@@ -1,4 +1,5 @@
 # WpfTemplate
+[![Build status](https://ci.appveyor.com/api/projects/status/fgo43rccop7sevjt?svg=true)](https://ci.appveyor.com/project/logue/wpftemplate)
 
 SurfLapras氏のテンプレートをベースに色々拡張したMVVMなWPFアプリケーションのテンプレートです。
 
@@ -21,8 +22,8 @@ PrismやUnity、MahAppsを利用したMVVM開発を行う際のテンプレー�
 
 ## Tips
 
-* アイコンは全種類入れてありますが、実際使う上では使うセットは制限しましょう。
-* 多言語化は、リソースファイルで行いますが、ResXFileCodeGeneratorを機能拡張からインストールすると、キーと原文と翻訳文を一度に編集できるのでおすすめです。
+* アイコンは全種類入れてありますが、実際使う上では使うセットは制限しましょう。参考：<https://github.com/MahApps/MahApps.Metro.IconPacks#custom-styles-for-packicon-controls>
+* 多言語化は、リソースファイルで行いますが、[ResXFileCodeGenerator](https://marketplace.visualstudio.com/items?itemName=LongLiang.ExtendedStronglyTypedResourceGenerator-18702)を機能拡張からインストールすると、キーと原文と翻訳文を一度に編集できるのでおすすめです。
 
 ## スクリーンショット
 
