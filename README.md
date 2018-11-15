@@ -1,4 +1,7 @@
+[English](README.en.md)
+
 # WpfTemplate
+
 [![Build status](https://ci.appveyor.com/api/projects/status/fgo43rccop7sevjt?svg=true)](https://ci.appveyor.com/project/logue/wpftemplate)
 
 SurfLapras氏のテンプレートをベースに色々拡張したMVVMなWPFアプリケーションのテンプレートです。

@@ -1,4 +1,7 @@
+[日本語](README.md)
+
 # WpfTemplate
+
 [![Build status](https://ci.appveyor.com/api/projects/status/fgo43rccop7sevjt?svg=true)](https://ci.appveyor.com/project/logue/wpftemplate)
 
 This is MahApps WPF template based on SurfLapras's tempate.
