@@ -1,10 +1,9 @@
-﻿using Microsoft.Practices.Unity;
-using Prism.Modularity;
-using Prism.Regions;
+﻿using Prism.Regions;
+using Unity;
 
 namespace WpfTemplate.Base
 {
-    public abstract class PrismBaseModule : IModule {
+    public abstract class PrismBaseModule {
         #region Ctor
 
         /// <summary>

@@ -10,7 +10,8 @@
 
 namespace WpfTemplate.Properties {
     using System;
-
+    
+    
     /// <summary>
     ///   ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
     /// </summary>
@@ -18,37 +19,38 @@ namespace WpfTemplate.Properties {
     // または Visual Studio のようなツールを使用して自動生成されました。
     // メンバーを追加または削除するには、.ResX ファイルを編集して、/str オプションと共に
     // ResGen を実行し直すか、または VS プロジェクトをビルドし直します。
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute ("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute ()]
-    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute ()]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
-        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute ("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources () { }
-
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
         /// <summary>
         ///   このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
         /// </summary>
-        [global::System.ComponentModel.EditorBrowsableAttribute (global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
-                if (object.ReferenceEquals (resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager ("WpfTemplate.Properties.Resources", typeof (Resources).Assembly);
+                if (object.ReferenceEquals(resourceMan, null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WpfTemplate.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
-        ///   厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+        ///   すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
         ///   現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
         /// </summary>
-        [global::System.ComponentModel.EditorBrowsableAttribute (global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
@@ -57,67 +59,67 @@ namespace WpfTemplate.Properties {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   About に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ShellAbout {
             get {
-                return ResourceManager.GetString ("ShellAbout", resourceCulture);
+                return ResourceManager.GetString("ShellAbout", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Color に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ShellColor {
             get {
-                return ResourceManager.GetString ("ShellColor", resourceCulture);
+                return ResourceManager.GetString("ShellColor", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Language に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ShellLanguage {
             get {
-                return ResourceManager.GetString ("ShellLanguage", resourceCulture);
+                return ResourceManager.GetString("ShellLanguage", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Here is main contents area. Defined in MainRegion.cs and MainRegionViewModel.cs. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ShellMainRegionMessage {
             get {
-                return ResourceManager.GetString ("ShellMainRegionMessage", resourceCulture);
+                return ResourceManager.GetString("ShellMainRegionMessage", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Settings に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ShellSettings {
             get {
-                return ResourceManager.GetString ("ShellSettings", resourceCulture);
+                return ResourceManager.GetString("ShellSettings", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Here is StatusBar message. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ShellStatusBarMessage {
             get {
-                return ResourceManager.GetString ("ShellStatusBarMessage", resourceCulture);
+                return ResourceManager.GetString("ShellStatusBarMessage", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Theme に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ShellTheme {
             get {
-                return ResourceManager.GetString ("ShellTheme", resourceCulture);
+                return ResourceManager.GetString("ShellTheme", resourceCulture);
             }
         }
     }

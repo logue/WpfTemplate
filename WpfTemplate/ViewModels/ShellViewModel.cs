@@ -1,5 +1,5 @@
-﻿using Microsoft.Practices.Unity;
-using Prism.Logging;
+﻿using Prism.Logging;
+using Unity;
 using WpfTemplate.Base;
 using WpfTemplate.Events;
 

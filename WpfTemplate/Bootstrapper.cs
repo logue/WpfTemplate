@@ -1,9 +1,10 @@
-﻿using Microsoft.Practices.Unity;
+﻿using Prism.Ioc;
 using Prism.Logging;
 using Prism.Modularity;
 using Prism.Regions;
 using Prism.Unity;
 using System.Windows;
+using Unity;
 using WpfTemplate.Base;
 using WpfTemplate.Constants;
 using WpfTemplate.Interfaces;
@@ -18,7 +19,7 @@ namespace WpfTemplate
         /// </summary>
         /// <returns></returns>
         protected override DependencyObject CreateShell () {
-            Container.RegisterInstance (typeof (Window), WindowNames.ShellName, Container.Resolve<Shell> (), new ContainerControlledLifetimeManager ());
+            Container.RegisterInstance (typeof (Window), WindowNames.ShellName, Container.Resolve<Shell> ());
             return Container.Resolve<Window> (WindowNames.ShellName);
         }
 
@@ -58,8 +59,7 @@ namespace WpfTemplate
             // Localizer service
             Container.RegisterInstance (typeof (ILocalizerService),
                 ServiceNames.LocalizerService,
-                new LocalizerService (),
-                new ContainerControlledLifetimeManager ());
+                new LocalizerService ());
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace WpfTemplate
         /// </summary>
         private void RegisterServices () {
             // MessageDisplayService
-            Container.RegisterInstance<IMetroMessageDisplayService> (ServiceNames.MetroMessageDisplayService, Container.Resolve<MetroMessageDisplayService> (), new ContainerControlledLifetimeManager ());
+            Container.RegisterInstance<IMetroMessageDisplayService> (ServiceNames.MetroMessageDisplayService, Container.Resolve<MetroMessageDisplayService> ());
         }
 
         /// <summary>

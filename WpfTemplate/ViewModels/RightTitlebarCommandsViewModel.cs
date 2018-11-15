@@ -1,6 +1,6 @@
-﻿using Microsoft.Practices.Unity;
-using Prism.Commands;
+﻿using Prism.Commands;
 using System.Windows.Input;
+using Unity;
 using WpfTemplate.Base;
 using WpfTemplate.Constants;
 using WpfTemplate.Interfaces;

@@ -1,8 +1,8 @@
 ﻿using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
-using Microsoft.Practices.Unity;
 using System.Threading.Tasks;
 using System.Windows;
+using Unity;
 using WpfTemplate.Constants;
 using WpfTemplate.Interfaces;
 
@@ -18,16 +18,10 @@ namespace WpfTemplate.Services
         }
 
         #region Properties
-
-        private MetroWindow _shell;
-
         /// <summary>
         /// The main window
         /// </summary>
-        public MetroWindow Shell {
-            get { return _shell; }
-            private set { _shell = value; }
-        }
+        public MetroWindow Shell { get; private set; }
 
         #endregion Properties
 

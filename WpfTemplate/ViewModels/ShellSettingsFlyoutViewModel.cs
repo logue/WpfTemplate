@@ -1,11 +1,11 @@
 ﻿using MahApps.Metro;
-using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media;
+using Unity;
 using WpfTemplate.Base;
 using WpfTemplate.Constants;
 using WpfTemplate.Events;

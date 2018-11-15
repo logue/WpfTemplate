@@ -14,13 +14,14 @@
 // organization, product, domain name, email address, logo, person,
 // places, or events is intended or should be inferred.
 //===================================================================================
+using CommonServiceLocator;
+using Prism.Regions;
 using System;
 using System.ComponentModel;
 using System.Windows;
-using Microsoft.Practices.ServiceLocation;
-using Prism.Regions;
 
-namespace WpfTemplate.Behaviors {
+namespace WpfTemplate.Behaviors
+{
     /// <summary>
     /// Declares the Attached Properties and Behaviors for implementing Popup regions.
     /// </summary>
