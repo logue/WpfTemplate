@@ -12,6 +12,8 @@ configuration:
 - Release
 - Debug
 
+platform: Any CPU
+
 build:
   parallel: true
   verbosity: minimal
@@ -23,8 +25,7 @@ after_build:
 - cmd: git rev-parse --short %APPVEYOR_REPO_COMMIT%>%TMP%\gitshort.txt
 - cmd: set /P GITSHORT=<%TMP%\gitshort.txt
 - set BUILD_ARCHIVE=%APPVEYOR_REPO_BRANCH%-%GITSHORT%-%PLATFORM%-%CONFIGURATION%.7z
-- cmd: cd "WpfTemplate\bin\"
-- cmd: cd "%PLATFORM%\%CONFIGURATION%"
+- cmd: cd "WpfTemplate\bin\%CONFIGURATION%"
 - cmd: 7z a %BUILD_ARCHIVE% * -xr!.gitignore
 - appveyor PushArtifact %BUILD_ARCHIVE%
 - cmd: cd ..\..\..\..
