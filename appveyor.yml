@@ -27,5 +27,5 @@ after_build:
 - set BUILD_ARCHIVE=%APPVEYOR_REPO_BRANCH%-%GITSHORT%-%PLATFORM%-%CONFIGURATION%.7z
 - cmd: cd "WpfTemplate\bin\%CONFIGURATION%"
 - cmd: 7z a %BUILD_ARCHIVE% * -xr!.gitignore
-- appveyor PushArtifact %BUILD_ARCHIVE%
+- appveyor PushArtifact %BUILD_ARCHIVE%.7z
 - cmd: cd ..\..\..\..
