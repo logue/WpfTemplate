@@ -13,7 +13,19 @@
     Example:
 
     ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader><resheader name="version">2.0</resheader><resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader><resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader><data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data><data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data><data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64"><value>[base64 mime encoded serialized .NET Framework object]</value></data><data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64"><value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value><comment>This is a comment</comment></data>
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
 
     There are any number of "resheader" rows that contain simple
     name/value pairs.
@@ -47,10 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root"
-    xmlns=""
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -109,24 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ShellColor" xml:space="preserve">
-    <value>色</value>
+    <value>색상</value>
   </data>
   <data name="ShellLanguage" xml:space="preserve">
-    <value>言語</value>
+    <value>언어</value>
   </data>
   <data name="ShellSettings" xml:space="preserve">
-    <value>設定</value>
+    <value>설정</value>
   </data>
   <data name="ShellTheme" xml:space="preserve">
-    <value>テーマ</value>
+    <value>테마</value>
   </data>
   <data name="ShellStatusBarMessage" xml:space="preserve">
-    <value>ここにステータスバーのメッセージが入ります。</value>
+    <value>여기에 상태 표시 줄의 메시지가 들어 있습니다.</value>
   </data>
   <data name="ShellAbout" xml:space="preserve">
-    <value>このアプリについて</value>
+    <value>약</value>
   </data>
   <data name="ShellMainRegionMessage" xml:space="preserve">
-    <value>ここには、メインコンテンツが入ります。MainRegion.csとMainRegionViewModelで定義します。</value>
+    <value>여기에, 메인 콘텐트가 입력됩니다 .MainRegion.cs와 MainRegionViewModel을 정의하십시오.</value>
   </data>
 </root>
