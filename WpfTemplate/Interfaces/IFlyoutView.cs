@@ -1,5 +1,7 @@
-﻿namespace WpfTemplate.Interfaces {
-    public interface IFlyoutView {
+﻿namespace WpfTemplate.Interfaces
+{
+    public interface IFlyoutView
+    {
         string FlyoutName { get; }
     }
 }

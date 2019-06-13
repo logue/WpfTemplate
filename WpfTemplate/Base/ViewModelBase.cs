@@ -6,11 +6,13 @@ using Unity;
 
 namespace WpfTemplate.Base
 {
-    public abstract class ViewModelBase : BindableBase {
-        public ViewModelBase () {
-            Container = ServiceLocator.Current.GetInstance<IUnityContainer> ();
-            RegionManager = ServiceLocator.Current.GetInstance<IRegionManager> ();
-            EventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator> ();
+    public abstract class ViewModelBase : BindableBase
+    {
+        public ViewModelBase()
+        {
+            Container = ServiceLocator.Current.GetInstance<IUnityContainer>();
+            RegionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
+            EventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
         }
 
         #region Properties
@@ -20,9 +22,10 @@ namespace WpfTemplate.Base
         /// <summary>
         /// The unity container
         /// </summary>
-        public IUnityContainer Container {
+        public IUnityContainer Container
+        {
             get { return _unityContainer; }
-            private set { SetProperty<IUnityContainer> (ref _unityContainer, value); }
+            private set { SetProperty<IUnityContainer>(ref _unityContainer, value); }
         }
 
         private IRegionManager _regionManager;
@@ -30,9 +33,10 @@ namespace WpfTemplate.Base
         /// <summary>
         /// The region manager
         /// </summary>
-        public IRegionManager RegionManager {
+        public IRegionManager RegionManager
+        {
             get { return _regionManager; }
-            private set { SetProperty<IRegionManager> (ref _regionManager, value); }
+            private set { SetProperty<IRegionManager>(ref _regionManager, value); }
         }
 
         private IEventAggregator _eventAggregator;
@@ -40,9 +44,10 @@ namespace WpfTemplate.Base
         /// <summary>
         /// The EventAggregator
         /// </summary>
-        public IEventAggregator EventAggregator {
+        public IEventAggregator EventAggregator
+        {
             get { return _eventAggregator; }
-            private set { SetProperty<IEventAggregator> (ref _eventAggregator, value); }
+            private set { SetProperty<IEventAggregator>(ref _eventAggregator, value); }
         }
 
         #endregion Properties

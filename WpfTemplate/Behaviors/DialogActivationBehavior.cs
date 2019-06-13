@@ -14,16 +14,18 @@
 // organization, product, domain name, email address, logo, person,
 // places, or events is intended or should be inferred.
 //===================================================================================
-using System.Collections.Specialized;
-using System.Windows;
 using Prism.Regions;
 using Prism.Regions.Behaviors;
+using System.Collections.Specialized;
+using System.Windows;
 
-namespace WpfTemplate.Behaviors {
+namespace WpfTemplate.Behaviors
+{
     /// <summary>
     /// Defines a behavior that creates a Dialog to display the active view of the target <see cref="IRegion"/>.
     /// </summary>
-    public abstract class DialogActivationBehavior : RegionBehavior, IHostAwareRegionBehavior {
+    public abstract class DialogActivationBehavior : RegionBehavior, IHostAwareRegionBehavior
+    {
         /// <summary>
         /// The key of this behavior
         /// </summary>
@@ -41,7 +43,8 @@ namespace WpfTemplate.Behaviors {
         /// <summary>
         /// Performs the logic after the behavior has been attached.
         /// </summary>
-        protected override void OnAttach () {
+        protected override void OnAttach()
+        {
             this.Region.ActiveViews.CollectionChanged += this.ActiveViews_CollectionChanged;
         }
 
@@ -53,42 +56,51 @@ namespace WpfTemplate.Behaviors {
         /// An instance of <see cref="IWindow"/> that will be shown when a 
         /// view is activated on the target <see cref="IRegion"/>.
         /// </returns>
-        protected abstract IWindow CreateWindow ();
+        protected abstract IWindow CreateWindow();
 
-        private void ActiveViews_CollectionChanged (object sender, NotifyCollectionChangedEventArgs e) {
-            if (e.Action == NotifyCollectionChangedAction.Add) {
-                this.CloseContentDialog ();
-                this.PrepareContentDialog (e.NewItems[0]);
-            } else if (e.Action == NotifyCollectionChangedAction.Remove) {
-                this.CloseContentDialog ();
+        private void ActiveViews_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == NotifyCollectionChangedAction.Add)
+            {
+                this.CloseContentDialog();
+                this.PrepareContentDialog(e.NewItems[0]);
+            }
+            else if (e.Action == NotifyCollectionChangedAction.Remove)
+            {
+                this.CloseContentDialog();
             }
         }
 
-        private Style GetStyleForView () {
-            return this.HostControl.GetValue (RegionPopupBehaviors.ContainerWindowStyleProperty) as Style;
+        private Style GetStyleForView()
+        {
+            return this.HostControl.GetValue(RegionPopupBehaviors.ContainerWindowStyleProperty) as Style;
         }
 
-        private void PrepareContentDialog (object view) {
-            this.contentDialog = this.CreateWindow ();
+        private void PrepareContentDialog(object view)
+        {
+            this.contentDialog = this.CreateWindow();
             this.contentDialog.Content = view;
             this.contentDialog.Owner = this.HostControl;
             this.contentDialog.Closed += this.ContentDialogClosed;
-            this.contentDialog.Style = this.GetStyleForView ();
-            this.contentDialog.Show ();
+            this.contentDialog.Style = this.GetStyleForView();
+            this.contentDialog.Show();
         }
 
-        private void CloseContentDialog () {
-            if (this.contentDialog != null) {
+        private void CloseContentDialog()
+        {
+            if (this.contentDialog != null)
+            {
                 this.contentDialog.Closed -= this.ContentDialogClosed;
-                this.contentDialog.Close ();
+                this.contentDialog.Close();
                 this.contentDialog.Content = null;
                 this.contentDialog.Owner = null;
             }
         }
 
-        private void ContentDialogClosed (object sender, System.EventArgs e) {
-            this.Region.Remove (this.contentDialog.Content);
-            this.CloseContentDialog ();
+        private void ContentDialogClosed(object sender, System.EventArgs e)
+        {
+            this.Region.Remove(this.contentDialog.Content);
+            this.CloseContentDialog();
         }
     }
 }

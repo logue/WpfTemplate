@@ -3,7 +3,8 @@ using Unity;
 
 namespace WpfTemplate.Base
 {
-    public abstract class PrismBaseModule {
+    public abstract class PrismBaseModule
+    {
         #region Ctor
 
         /// <summary>
@@ -12,7 +13,8 @@ namespace WpfTemplate.Base
         /// <param name="unityContainer">The Unity container.</param>
         /// <param name="regionManager">The region manager.</param>
         /// <param name="regionViewRegistry">The region view registry.</param>
-        public PrismBaseModule (IUnityContainer unityContainer, IRegionManager regionManager) {
+        public PrismBaseModule(IUnityContainer unityContainer, IRegionManager regionManager)
+        {
             UnityContainer = unityContainer;
             RegionManager = regionManager;
         }
@@ -24,7 +26,8 @@ namespace WpfTemplate.Base
         /// <summary>
         /// Initialize module
         /// </summary>
-        public virtual void Initialize () {
+        public virtual void Initialize()
+        {
 
         }
 

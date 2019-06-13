@@ -17,11 +17,13 @@
 using System;
 using System.Windows;
 
-namespace WpfTemplate.Behaviors {
+namespace WpfTemplate.Behaviors
+{
     /// <summary>
     /// Defines the interface for the Dialogs that are shown by <see cref="DialogActivationBehavior"/>.
     /// </summary>
-    public interface IWindow {
+    public interface IWindow
+    {
         /// <summary>
         /// Ocurrs when the <see cref="IWindow"/> is closed.
         /// </summary>
@@ -45,11 +47,11 @@ namespace WpfTemplate.Behaviors {
         /// <summary>
         /// Opens the <see cref="IWindow"/>.
         /// </summary>
-        void Show ();
+        void Show();
 
         /// <summary>
         /// Closes the <see cref="IWindow"/>.
         /// </summary>
-        void Close ();
+        void Close();
     }
 }

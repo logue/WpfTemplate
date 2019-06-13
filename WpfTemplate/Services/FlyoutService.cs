@@ -9,31 +9,37 @@ using WpfTemplate.Interfaces;
 
 namespace WpfTemplate.Services
 {
-    public class FlyoutService : IFlyoutService {
+    public class FlyoutService : IFlyoutService
+    {
         IRegionManager _regionManager;
 
         public ICommand ShowFlyoutCommand { get; private set; }
 
-        public FlyoutService (IRegionManager regionManager, IApplicationCommands applicationCommands) {
+        public FlyoutService(IRegionManager regionManager, IApplicationCommands applicationCommands)
+        {
             _regionManager = regionManager;
 
-            ShowFlyoutCommand = new DelegateCommand<string> (ShowFlyout, CanShowFlyout);
-            applicationCommands.ShowFlyoutCommand.RegisterCommand (ShowFlyoutCommand);
+            ShowFlyoutCommand = new DelegateCommand<string>(ShowFlyout, CanShowFlyout);
+            applicationCommands.ShowFlyoutCommand.RegisterCommand(ShowFlyoutCommand);
         }
 
-        public void ShowFlyout (string flyoutName) {
+        public void ShowFlyout(string flyoutName)
+        {
             var region = _regionManager.Regions[RegionNames.FlyoutRegion];
 
-            if (region != null) {
-                var flyout = region.Views.Where (v => v is IFlyoutView && ((IFlyoutView) v).FlyoutName.Equals (flyoutName)).FirstOrDefault () as Flyout;
+            if (region != null)
+            {
+                var flyout = region.Views.Where(v => v is IFlyoutView && ((IFlyoutView)v).FlyoutName.Equals(flyoutName)).FirstOrDefault() as Flyout;
 
-                if (flyout != null) {
+                if (flyout != null)
+                {
                     flyout.IsOpen = !flyout.IsOpen;
                 }
             }
         }
 
-        public bool CanShowFlyout (string flyoutName) {
+        public bool CanShowFlyout(string flyoutName)
+        {
             return true;
         }
     }

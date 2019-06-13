@@ -3,7 +3,8 @@ using System.Windows.Media;
 
 namespace WpfTemplate.Base
 {
-    public abstract class ViewModelDialogPopupBase : BindableBase {
+    public abstract class ViewModelDialogPopupBase : BindableBase
+    {
         /// <summary>
         /// View title
         /// </summary>

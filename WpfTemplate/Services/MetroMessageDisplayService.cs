@@ -8,13 +8,15 @@ using WpfTemplate.Interfaces;
 
 namespace WpfTemplate.Services
 {
-    public class MetroMessageDisplayService : IMetroMessageDisplayService {
+    public class MetroMessageDisplayService : IMetroMessageDisplayService
+    {
         /// <summary>
         /// CTOR
         /// </summary>
         /// <param name="container">Unity container.</param>
-        public MetroMessageDisplayService (IUnityContainer container) {
-            Shell = container.Resolve<Window> (WindowNames.ShellName) as MetroWindow;
+        public MetroMessageDisplayService(IUnityContainer container)
+        {
+            Shell = container.Resolve<Window>(WindowNames.ShellName) as MetroWindow;
         }
 
         #region Properties
@@ -25,10 +27,11 @@ namespace WpfTemplate.Services
 
         #endregion Properties
 
-        public async Task<MessageDialogResult> ShowMessageAsnyc (string title, string message, MessageDialogStyle style = MessageDialogStyle.Affirmative, MetroDialogSettings settings = null) {
+        public async Task<MessageDialogResult> ShowMessageAsnyc(string title, string message, MessageDialogStyle style = MessageDialogStyle.Affirmative, MetroDialogSettings settings = null)
+        {
             Shell.MetroDialogOptions.ColorScheme = MetroDialogColorScheme.Accented;
 
-            return await Shell.ShowMessageAsync (title, message, style, Shell.MetroDialogOptions);
+            return await Shell.ShowMessageAsync(title, message, style, Shell.MetroDialogOptions);
         }
 
     }

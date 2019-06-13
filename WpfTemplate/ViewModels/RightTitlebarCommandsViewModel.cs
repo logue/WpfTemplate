@@ -8,17 +8,20 @@ using WpfTemplate.Model;
 
 namespace WpfTemplate.ViewModels
 {
-    public class RightTitlebarCommandsViewModel : ViewModelBase {
-        public RightTitlebarCommandsViewModel () {
+    public class RightTitlebarCommandsViewModel : ViewModelBase
+    {
+        public RightTitlebarCommandsViewModel()
+        {
             // Initialize commands
-            IntializeCommands ();
+            IntializeCommands();
         }
 
         /// <summary>
         /// Initialize commands
         /// </summary>
-        private void IntializeCommands () {
-            ShowAboutDialogCommand = new DelegateCommand (ShowAboutDialog, CanShowAboutDialog);
+        private void IntializeCommands()
+        {
+            ShowAboutDialogCommand = new DelegateCommand(ShowAboutDialog, CanShowAboutDialog);
         }
 
         /// <summary>
@@ -26,16 +29,18 @@ namespace WpfTemplate.ViewModels
         /// </summary>
         public ICommand ShowAboutDialogCommand { get; private set; }
 
-        public bool CanShowAboutDialog () {
+        public bool CanShowAboutDialog()
+        {
             return true;
         }
 
         /// <summary>
         /// Show message
         /// </summary>
-        public void ShowAboutDialog () {
-            var assembly = new AppAssembly ();
-            Container.Resolve<IMetroMessageDisplayService> (ServiceNames.MetroMessageDisplayService).ShowMessageAsnyc (
+        public void ShowAboutDialog()
+        {
+            var assembly = new AppAssembly();
+            Container.Resolve<IMetroMessageDisplayService>(ServiceNames.MetroMessageDisplayService).ShowMessageAsnyc(
                 assembly.Title, "Version :" + assembly.Version
             );
         }

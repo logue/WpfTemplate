@@ -1,7 +1,9 @@
-﻿namespace WpfTemplate.Interfaces {
-    public interface IFlyoutService {
-        void ShowFlyout (string flyoutName);
+﻿namespace WpfTemplate.Interfaces
+{
+    public interface IFlyoutService
+    {
+        void ShowFlyout(string flyoutName);
 
-        bool CanShowFlyout (string flyoutName);
+        bool CanShowFlyout(string flyoutName);
     }
 }

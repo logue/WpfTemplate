@@ -5,15 +5,17 @@ using WpfTemplate.Events;
 
 namespace WpfTemplate.ViewModels
 {
-    public class ShellViewModel : ViewModelBase {
+    public class ShellViewModel : ViewModelBase
+    {
         /// <summary>
         /// CTOR
         /// </summary>
-        public ShellViewModel () {
+        public ShellViewModel()
+        {
             // Register to events
-            EventAggregator.GetEvent<StatusBarMessageUpdateEvent> ().Subscribe (OnStatusBarMessageUpdateEvent);
+            EventAggregator.GetEvent<StatusBarMessageUpdateEvent>().Subscribe(OnStatusBarMessageUpdateEvent);
 
-            Container.Resolve<ILoggerFacade> ().Log ("ShellViewModel created", Category.Info, Priority.None);
+            Container.Resolve<ILoggerFacade>().Log("ShellViewModel created", Category.Info, Priority.None);
         }
 
         #region Event-Handler
@@ -21,7 +23,8 @@ namespace WpfTemplate.ViewModels
         /// EventHandler for the update status bar event
         /// </summary>
         /// <param name="statusBarMessage"></param>
-        private void OnStatusBarMessageUpdateEvent (string statusBarMessage) {
+        private void OnStatusBarMessageUpdateEvent(string statusBarMessage)
+        {
             StatusBarMessage = _statusBarMessage;
         }
 
@@ -33,9 +36,10 @@ namespace WpfTemplate.ViewModels
         /// <summary>
         /// Shell Window Title
         /// </summary>
-        public string Title {
+        public string Title
+        {
             get { return _title; }
-            set { SetProperty (ref _title, value); }
+            set { SetProperty(ref _title, value); }
         }
 
         private string _statusBarMessage;
@@ -43,9 +47,10 @@ namespace WpfTemplate.ViewModels
         /// <summary>
         /// Status-Bar message
         /// </summary>
-        public string StatusBarMessage {
+        public string StatusBarMessage
+        {
             get { return _statusBarMessage; }
-            set { SetProperty<string> (ref _statusBarMessage, value); }
+            set { SetProperty<string>(ref _statusBarMessage, value); }
         }
 
         #endregion Properties

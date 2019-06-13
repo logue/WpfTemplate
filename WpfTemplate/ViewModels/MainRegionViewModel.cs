@@ -1,15 +1,11 @@
-﻿using System.Windows.Input;
-using Unity;
-using Prism.Commands;
-using WpfTemplate.Base;
-using WpfTemplate.Constants;
-using WpfTemplate.Interfaces;
-using WpfTemplate.Model;
+﻿using WpfTemplate.Base;
 
 namespace WpfTemplate.ViewModels
 {
-    class MainRegionViewModel : ViewModelBase {
-        public MainRegionViewModel () {
+    class MainRegionViewModel : ViewModelBase
+    {
+        public MainRegionViewModel()
+        {
             // Initialize commands
         }
     }

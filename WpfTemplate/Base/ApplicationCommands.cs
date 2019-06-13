@@ -18,16 +18,20 @@ using Prism.Commands;
 
 namespace WpfTemplate.Base
 {
-    public static class ApplicationCommands {
-        public static CompositeCommand ShowFlyoutCommand = new CompositeCommand ();
+    public static class ApplicationCommands
+    {
+        public static CompositeCommand ShowFlyoutCommand = new CompositeCommand();
     }
 
-    public interface IApplicationCommands {
+    public interface IApplicationCommands
+    {
         CompositeCommand ShowFlyoutCommand { get; }
     }
 
-    public class ApplicationCommandsProxy : IApplicationCommands {
-        public CompositeCommand ShowFlyoutCommand {
+    public class ApplicationCommandsProxy : IApplicationCommands
+    {
+        public CompositeCommand ShowFlyoutCommand
+        {
             get { return ApplicationCommands.ShowFlyoutCommand; }
         }
     }

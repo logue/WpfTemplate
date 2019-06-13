@@ -17,25 +17,29 @@
 using System;
 using System.Windows;
 
-namespace WpfTemplate.Behaviors {
+namespace WpfTemplate.Behaviors
+{
     /// <summary>
     /// Defines a wrapper for the <see cref="Window"/> class that implements the <see cref="IWindow"/> interface.
     /// </summary>
-    public class WindowWrapper : IWindow {
+    public class WindowWrapper : IWindow
+    {
         private readonly Window window;
 
         /// <summary>
         /// Initializes a new instance of <see cref="WindowWrapper"/>.
         /// </summary>
-        public WindowWrapper () {
-            this.window = new Window ();
+        public WindowWrapper()
+        {
+            this.window = new Window();
             this.window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
         }
 
         /// <summary>
         /// Ocurrs when the <see cref="Window"/> is closed.
         /// </summary>
-        public event EventHandler Closed {
+        public event EventHandler Closed
+        {
             add { this.window.Closed += value; }
             remove { this.window.Closed -= value; }
         }
@@ -43,7 +47,8 @@ namespace WpfTemplate.Behaviors {
         /// <summary>
         /// Gets or Sets the content for the <see cref="Window"/>.
         /// </summary>
-        public object Content {
+        public object Content
+        {
             get { return this.window.Content; }
             set { this.window.Content = value; }
         }
@@ -51,7 +56,8 @@ namespace WpfTemplate.Behaviors {
         /// <summary>
         /// Gets or Sets the <see cref="Window.Owner"/> control of the <see cref="Window"/>.
         /// </summary>
-        public object Owner {
+        public object Owner
+        {
             get { return this.window.Owner; }
             set { this.window.Owner = value as Window; }
         }
@@ -59,7 +65,8 @@ namespace WpfTemplate.Behaviors {
         /// <summary>
         /// Gets or Sets the <see cref="FrameworkElement.Style"/> to apply to the <see cref="Window"/>.
         /// </summary>
-        public Style Style {
+        public Style Style
+        {
             get { return this.window.Style; }
             set { this.window.Style = value; }
         }
@@ -67,15 +74,17 @@ namespace WpfTemplate.Behaviors {
         /// <summary>
         /// Opens the <see cref="Window"/>.
         /// </summary>
-        public void Show () {
-            this.window.ShowDialog ();
+        public void Show()
+        {
+            this.window.ShowDialog();
         }
 
         /// <summary>
         /// Closes the <see cref="Window"/>.
         /// </summary>
-        public void Close () {
-            this.window.Close ();
+        public void Close()
+        {
+            this.window.Close();
         }
     }
 }

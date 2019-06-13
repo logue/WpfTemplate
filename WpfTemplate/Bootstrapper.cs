@@ -13,60 +13,66 @@ using WpfTemplate.Views;
 
 namespace WpfTemplate
 {
-    public class Bootstrapper : UnityBootstrapper {
+    public class Bootstrapper : UnityBootstrapper
+    {
         /// <summary>
         /// The shell object
         /// </summary>
         /// <returns></returns>
-        protected override DependencyObject CreateShell () {
-            Container.RegisterInstance (typeof (Window), WindowNames.ShellName, Container.Resolve<Shell> ());
-            return Container.Resolve<Window> (WindowNames.ShellName);
+        protected override DependencyObject CreateShell()
+        {
+            Container.RegisterInstance(typeof(Window), WindowNames.ShellName, Container.Resolve<Shell>());
+            return Container.Resolve<Window>(WindowNames.ShellName);
         }
 
         /// <summary>
         /// Initialize shell (MainWindow)
         /// </summary>
-        protected override void InitializeShell () {
-            base.InitializeShell ();
+        protected override void InitializeShell()
+        {
+            base.InitializeShell();
 
             // Register views
-            var regionManager = Container.Resolve<IRegionManager> ();
-            if (regionManager != null) {
+            var regionManager = Container.Resolve<IRegionManager>();
+            if (regionManager != null)
+            {
                 // Add right windows commands
-                regionManager.RegisterViewWithRegion (RegionNames.RightWindowCommandsRegion, typeof (RightTitlebarCommands));
+                regionManager.RegisterViewWithRegion(RegionNames.RightWindowCommandsRegion, typeof(RightTitlebarCommands));
                 // Add flyouts
-                regionManager.RegisterViewWithRegion (RegionNames.FlyoutRegion, typeof (ShellSettingsFlyout));
+                regionManager.RegisterViewWithRegion(RegionNames.FlyoutRegion, typeof(ShellSettingsFlyout));
                 // Add tiles to MainRegion
-                regionManager.RegisterViewWithRegion (RegionNames.MainRegion, typeof (MainRegion));
+                regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(MainRegion));
             }
 
             // Register services
-            RegisterServices ();
+            RegisterServices();
 
-            Application.Current.MainWindow.Show ();
+            Application.Current.MainWindow.Show();
         }
 
         /// <summary>
         /// Configure the container
         /// </summary>
-        protected override void ConfigureContainer () {
-            base.ConfigureContainer ();
+        protected override void ConfigureContainer()
+        {
+            base.ConfigureContainer();
 
             // Application commands
-            Container.RegisterType<IApplicationCommands, ApplicationCommandsProxy> ();
+            Container.RegisterType<IApplicationCommands, ApplicationCommandsProxy>();
             // Flyout service
-            Container.RegisterInstance<IFlyoutService> (Container.Resolve<FlyoutService> ());
+            Container.RegisterInstance<IFlyoutService>(Container.Resolve<FlyoutService>());
             // Localizer service
-            Container.RegisterInstance (typeof (ILocalizerService),
+            Container.RegisterInstance(typeof(ILocalizerService),
                 ServiceNames.LocalizerService,
-                new LocalizerService ());
+                new LocalizerService());
         }
 
         /// <summary>
         /// Configure the module catalog
         /// </summary>
-        protected override void ConfigureModuleCatalog () {
-            ModuleCatalog moduleCatalog = (ModuleCatalog) this.ModuleCatalog;
+        protected override void ConfigureModuleCatalog()
+        {
+            ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
             // Register ModuleA
             // moduleCatalog.AddModule(typeof(ModuleA.ModuleA));
             // Register ModuleB
@@ -76,17 +82,19 @@ namespace WpfTemplate
         /// <summary>
         /// Register services
         /// </summary>
-        private void RegisterServices () {
+        private void RegisterServices()
+        {
             // MessageDisplayService
-            Container.RegisterInstance<IMetroMessageDisplayService> (ServiceNames.MetroMessageDisplayService, Container.Resolve<MetroMessageDisplayService> ());
+            Container.RegisterInstance<IMetroMessageDisplayService>(ServiceNames.MetroMessageDisplayService, Container.Resolve<MetroMessageDisplayService>());
         }
 
         /// <summary>
         /// Create logger
         /// </summary>
         /// <returns></returns>
-        protected override ILoggerFacade CreateLogger () {
-            return base.CreateLogger ();
+        protected override ILoggerFacade CreateLogger()
+        {
+            return base.CreateLogger();
         }
     }
 }
