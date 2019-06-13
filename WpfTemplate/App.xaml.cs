@@ -11,7 +11,7 @@ namespace WpfTemplate
         {
             base.OnStartup(e);
 
-            var bootstrapper = new Bootstrapper();
+            Bootstrapper bootstrapper = new Bootstrapper();
             bootstrapper.Run();
         }
     }

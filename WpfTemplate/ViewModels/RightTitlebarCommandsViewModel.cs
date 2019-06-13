@@ -1,4 +1,5 @@
 ﻿using Prism.Commands;
+using Prism.Logging;
 using System.Windows.Input;
 using Unity;
 using WpfTemplate.Base;
@@ -14,6 +15,8 @@ namespace WpfTemplate.ViewModels
         {
             // Initialize commands
             IntializeCommands();
+
+            Container.Resolve<ILoggerFacade>().Log("RightTitlebarCommandsViewModel created", Category.Info, Priority.None);
         }
 
         /// <summary>
@@ -39,9 +42,9 @@ namespace WpfTemplate.ViewModels
         /// </summary>
         public void ShowAboutDialog()
         {
-            var assembly = new AppAssembly();
+            AppAssembly Assembly = new AppAssembly();
             Container.Resolve<IMetroMessageDisplayService>(ServiceNames.MetroMessageDisplayService).ShowMessageAsnyc(
-                assembly.Title, "Version :" + assembly.Version
+                Assembly.Title + " v" + Assembly.Version, Assembly.Description
             );
         }
     }

@@ -24,8 +24,8 @@ namespace WpfTemplate.Base
         /// </summary>
         public IUnityContainer Container
         {
-            get { return _unityContainer; }
-            private set { SetProperty<IUnityContainer>(ref _unityContainer, value); }
+            get => _unityContainer;
+            private set => SetProperty<IUnityContainer>(ref _unityContainer, value);
         }
 
         private IRegionManager _regionManager;
@@ -35,8 +35,8 @@ namespace WpfTemplate.Base
         /// </summary>
         public IRegionManager RegionManager
         {
-            get { return _regionManager; }
-            private set { SetProperty<IRegionManager>(ref _regionManager, value); }
+            get => _regionManager;
+            private set => SetProperty<IRegionManager>(ref _regionManager, value);
         }
 
         private IEventAggregator _eventAggregator;
@@ -46,8 +46,8 @@ namespace WpfTemplate.Base
         /// </summary>
         public IEventAggregator EventAggregator
         {
-            get { return _eventAggregator; }
-            private set { SetProperty<IEventAggregator>(ref _eventAggregator, value); }
+            get => _eventAggregator;
+            private set => SetProperty<IEventAggregator>(ref _eventAggregator, value);
         }
 
         #endregion Properties

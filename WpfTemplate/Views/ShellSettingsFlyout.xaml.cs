@@ -17,9 +17,6 @@ namespace WpfTemplate.Views
         /// <summary>
         /// The flyout name
         /// </summary>
-        public string FlyoutName
-        {
-            get { return FlyoutNames.ShellSettingsFlyout; }
-        }
+        public string FlyoutName => FlyoutNames.ShellSettingsFlyout;
     }
 }

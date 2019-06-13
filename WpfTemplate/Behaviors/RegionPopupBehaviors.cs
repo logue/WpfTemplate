@@ -127,8 +127,10 @@ namespace WpfTemplate.Behaviors
             {
                 IRegion region = new SingleActiveRegion();
                 DialogActivationBehavior behavior;
-                behavior = new WindowDialogActivationBehavior();
-                behavior.HostControl = owner;
+                behavior = new WindowDialogActivationBehavior
+                {
+                    HostControl = owner
+                };
 
                 region.Behaviors.Add(DialogActivationBehavior.BehaviorKey, behavior);
                 regionManager.Regions.Add(regionName, region);

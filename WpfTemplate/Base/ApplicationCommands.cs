@@ -30,9 +30,6 @@ namespace WpfTemplate.Base
 
     public class ApplicationCommandsProxy : IApplicationCommands
     {
-        public CompositeCommand ShowFlyoutCommand
-        {
-            get { return ApplicationCommands.ShowFlyoutCommand; }
-        }
+        public CompositeCommand ShowFlyoutCommand => ApplicationCommands.ShowFlyoutCommand;
     }
 }

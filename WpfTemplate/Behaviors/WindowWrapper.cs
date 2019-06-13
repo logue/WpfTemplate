@@ -31,8 +31,10 @@ namespace WpfTemplate.Behaviors
         /// </summary>
         public WindowWrapper()
         {
-            this.window = new Window();
-            this.window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            window = new Window
+            {
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
         }
 
         /// <summary>
@@ -40,8 +42,8 @@ namespace WpfTemplate.Behaviors
         /// </summary>
         public event EventHandler Closed
         {
-            add { this.window.Closed += value; }
-            remove { this.window.Closed -= value; }
+            add { window.Closed += value; }
+            remove { window.Closed -= value; }
         }
 
         /// <summary>
@@ -49,8 +51,8 @@ namespace WpfTemplate.Behaviors
         /// </summary>
         public object Content
         {
-            get { return this.window.Content; }
-            set { this.window.Content = value; }
+            get => window.Content;
+            set => window.Content = value;
         }
 
         /// <summary>
@@ -58,8 +60,8 @@ namespace WpfTemplate.Behaviors
         /// </summary>
         public object Owner
         {
-            get { return this.window.Owner; }
-            set { this.window.Owner = value as Window; }
+            get => window.Owner;
+            set => window.Owner = value as Window;
         }
 
         /// <summary>
@@ -67,8 +69,8 @@ namespace WpfTemplate.Behaviors
         /// </summary>
         public Style Style
         {
-            get { return this.window.Style; }
-            set { this.window.Style = value; }
+            get => window.Style;
+            set => window.Style = value;
         }
 
         /// <summary>
@@ -76,7 +78,7 @@ namespace WpfTemplate.Behaviors
         /// </summary>
         public void Show()
         {
-            this.window.ShowDialog();
+            window.ShowDialog();
         }
 
         /// <summary>
@@ -84,7 +86,7 @@ namespace WpfTemplate.Behaviors
         /// </summary>
         public void Close()
         {
-            this.window.Close();
+            window.Close();
         }
     }
 }

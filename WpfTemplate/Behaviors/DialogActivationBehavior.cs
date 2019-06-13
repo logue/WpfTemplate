@@ -45,7 +45,7 @@ namespace WpfTemplate.Behaviors
         /// </summary>
         protected override void OnAttach()
         {
-            this.Region.ActiveViews.CollectionChanged += this.ActiveViews_CollectionChanged;
+            Region.ActiveViews.CollectionChanged += ActiveViews_CollectionChanged;
         }
 
         /// <summary>
@@ -62,45 +62,45 @@ namespace WpfTemplate.Behaviors
         {
             if (e.Action == NotifyCollectionChangedAction.Add)
             {
-                this.CloseContentDialog();
-                this.PrepareContentDialog(e.NewItems[0]);
+                CloseContentDialog();
+                PrepareContentDialog(e.NewItems[0]);
             }
             else if (e.Action == NotifyCollectionChangedAction.Remove)
             {
-                this.CloseContentDialog();
+                CloseContentDialog();
             }
         }
 
         private Style GetStyleForView()
         {
-            return this.HostControl.GetValue(RegionPopupBehaviors.ContainerWindowStyleProperty) as Style;
+            return HostControl.GetValue(RegionPopupBehaviors.ContainerWindowStyleProperty) as Style;
         }
 
         private void PrepareContentDialog(object view)
         {
-            this.contentDialog = this.CreateWindow();
-            this.contentDialog.Content = view;
-            this.contentDialog.Owner = this.HostControl;
-            this.contentDialog.Closed += this.ContentDialogClosed;
-            this.contentDialog.Style = this.GetStyleForView();
-            this.contentDialog.Show();
+            contentDialog = CreateWindow();
+            contentDialog.Content = view;
+            contentDialog.Owner = HostControl;
+            contentDialog.Closed += ContentDialogClosed;
+            contentDialog.Style = GetStyleForView();
+            contentDialog.Show();
         }
 
         private void CloseContentDialog()
         {
-            if (this.contentDialog != null)
+            if (contentDialog != null)
             {
-                this.contentDialog.Closed -= this.ContentDialogClosed;
-                this.contentDialog.Close();
-                this.contentDialog.Content = null;
-                this.contentDialog.Owner = null;
+                contentDialog.Closed -= ContentDialogClosed;
+                contentDialog.Close();
+                contentDialog.Content = null;
+                contentDialog.Owner = null;
             }
         }
 
         private void ContentDialogClosed(object sender, System.EventArgs e)
         {
-            this.Region.Remove(this.contentDialog.Content);
-            this.CloseContentDialog();
+            Region.Remove(contentDialog.Content);
+            CloseContentDialog();
         }
     }
 }

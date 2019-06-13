@@ -12,8 +12,8 @@ namespace WpfTemplate.Model
         /// </summary>
         public string Name
         {
-            get { return _name; }
-            set { SetProperty<string>(ref _name, value); }
+            get => _name;
+            set => SetProperty<string>(ref _name, value);
         }
 
         private Brush _colorBrush;
@@ -23,8 +23,8 @@ namespace WpfTemplate.Model
         /// </summary>
         public Brush ColorBrush
         {
-            get { return _colorBrush; }
-            set { SetProperty<Brush>(ref _colorBrush, value); }
+            get => _colorBrush;
+            set => SetProperty<Brush>(ref _colorBrush, value);
         }
 
         private Brush _borderColorBrush;
@@ -34,8 +34,8 @@ namespace WpfTemplate.Model
         /// </summary>
         public Brush BorderColorBrush
         {
-            get { return _borderColorBrush; }
-            set { SetProperty<Brush>(ref _borderColorBrush, value); }
+            get => _borderColorBrush;
+            set => SetProperty<Brush>(ref _borderColorBrush, value);
         }
     }
 }

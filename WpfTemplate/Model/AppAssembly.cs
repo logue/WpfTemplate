@@ -24,13 +24,7 @@ namespace WpfTemplate.Model
                 return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
             }
         }
-        public string Version
-        {
-            get
-            {
-                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            }
-        }
+        public string Version => Assembly.GetExecutingAssembly().GetName().Version.ToString();
         public string Description
         {
             get

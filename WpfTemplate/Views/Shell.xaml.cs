@@ -18,8 +18,8 @@ namespace WpfTemplate.Views
             // therefore the regionManager is never found and cannot be assigned automatically by Prism.  This means we have to handle this ourselves
             if (regionManager != null)
             {
-                SetRegionManager(regionManager, this.rightWindowCommandsRegion, RegionNames.RightWindowCommandsRegion);
-                SetRegionManager(regionManager, this.flyoutsControlRegion, RegionNames.FlyoutRegion);
+                SetRegionManager(regionManager, rightWindowCommandsRegion, RegionNames.RightWindowCommandsRegion);
+                SetRegionManager(regionManager, flyoutsControlRegion, RegionNames.FlyoutRegion);
             }
         }
 

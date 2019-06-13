@@ -11,7 +11,7 @@ namespace WpfTemplate.Services
 {
     public class FlyoutService : IFlyoutService
     {
-        IRegionManager _regionManager;
+        private readonly IRegionManager _regionManager;
 
         public ICommand ShowFlyoutCommand { get; private set; }
 
@@ -25,11 +25,11 @@ namespace WpfTemplate.Services
 
         public void ShowFlyout(string flyoutName)
         {
-            var region = _regionManager.Regions[RegionNames.FlyoutRegion];
+            IRegion region = _regionManager.Regions[RegionNames.FlyoutRegion];
 
             if (region != null)
             {
-                var flyout = region.Views.Where(v => v is IFlyoutView && ((IFlyoutView)v).FlyoutName.Equals(flyoutName)).FirstOrDefault() as Flyout;
+                Flyout flyout = region.Views.Where(v => v is IFlyoutView && ((IFlyoutView)v).FlyoutName.Equals(flyoutName)).FirstOrDefault() as Flyout;
 
                 if (flyout != null)
                 {

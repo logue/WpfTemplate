@@ -33,7 +33,7 @@ namespace WpfTemplate
             base.InitializeShell();
 
             // Register views
-            var regionManager = Container.Resolve<IRegionManager>();
+            IRegionManager regionManager = Container.Resolve<IRegionManager>();
             if (regionManager != null)
             {
                 // Add right windows commands
@@ -72,7 +72,7 @@ namespace WpfTemplate
         /// </summary>
         protected override void ConfigureModuleCatalog()
         {
-            ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
+            ModuleCatalog moduleCatalog = (ModuleCatalog)ModuleCatalog;
             // Register ModuleA
             // moduleCatalog.AddModule(typeof(ModuleA.ModuleA));
             // Register ModuleB
@@ -95,6 +95,7 @@ namespace WpfTemplate
         protected override ILoggerFacade CreateLogger()
         {
             return base.CreateLogger();
+            //return new Logging.NLogLogger();
         }
     }
 }

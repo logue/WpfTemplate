@@ -19,12 +19,15 @@ namespace WpfTemplate.Services
             if (locale == null)
             {
                 locale = CultureInfo.CurrentCulture.ToString();
-                Debug.Write(locale);
             }
 
             SupportedLanguages = CultureInfo.GetCultures(CultureTypes.AllCultures).Where(
-                c => c.IetfLanguageTag.Equals("ja-JP") ||
-                     c.IetfLanguageTag.Equals("en"))
+                c =>
+                    c.IetfLanguageTag.Equals("en") ||
+                    c.IetfLanguageTag.Equals("ja") ||
+                    c.IetfLanguageTag.Equals("ko") ||
+                    c.IetfLanguageTag.Equals("zh")
+            )
                 .ToList<CultureInfo>();
             SetLocale(locale);
         }
@@ -54,9 +57,8 @@ namespace WpfTemplate.Services
         /// <returns></returns>
         public string GetLocalizedString(string key)
         {
-            string uiString;
             LocExtension locExtension = new LocExtension(key);
-            locExtension.ResolveLocalizedValue(out uiString);
+            locExtension.ResolveLocalizedValue(out string uiString);
             return uiString;
         }
 
@@ -70,8 +72,8 @@ namespace WpfTemplate.Services
         /// </summary>
         public CultureInfo SelectedLanguage
         {
-            get { return LocalizeDictionary.Instance.Culture; }
-            set { SetLocale(value); }
+            get => LocalizeDictionary.Instance.Culture;
+            set => SetLocale(value);
         }
     }
 }
