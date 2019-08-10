@@ -10,8 +10,8 @@
 
 namespace WpfTemplate.Properties {
     using System;
-
-
+    
+    
     /// <summary>
     ///   ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
     /// </summary>
@@ -23,15 +23,15 @@ namespace WpfTemplate.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-
+        
         /// <summary>
         ///   このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
         /// </summary>
@@ -45,7 +45,7 @@ namespace WpfTemplate.Properties {
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
         ///   現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
@@ -59,7 +59,7 @@ namespace WpfTemplate.Properties {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   About に類似しているローカライズされた文字列を検索します。
         /// </summary>
@@ -68,7 +68,7 @@ namespace WpfTemplate.Properties {
                 return ResourceManager.GetString("ShellAbout", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Color に類似しているローカライズされた文字列を検索します。
         /// </summary>
@@ -77,7 +77,7 @@ namespace WpfTemplate.Properties {
                 return ResourceManager.GetString("ShellColor", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Language に類似しているローカライズされた文字列を検索します。
         /// </summary>
@@ -86,7 +86,7 @@ namespace WpfTemplate.Properties {
                 return ResourceManager.GetString("ShellLanguage", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Here is main contents area. Defined in MainRegion.cs and MainRegionViewModel.cs. に類似しているローカライズされた文字列を検索します。
         /// </summary>
@@ -95,7 +95,7 @@ namespace WpfTemplate.Properties {
                 return ResourceManager.GetString("ShellMainRegionMessage", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Settings に類似しているローカライズされた文字列を検索します。
         /// </summary>
@@ -104,7 +104,7 @@ namespace WpfTemplate.Properties {
                 return ResourceManager.GetString("ShellSettings", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Here is StatusBar message area. に類似しているローカライズされた文字列を検索します。
         /// </summary>
@@ -113,7 +113,7 @@ namespace WpfTemplate.Properties {
                 return ResourceManager.GetString("ShellStatusBarMessage", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Theme に類似しているローカライズされた文字列を検索します。
         /// </summary>

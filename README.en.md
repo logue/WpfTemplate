@@ -4,7 +4,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/fgo43rccop7sevjt?svg=true)](https://ci.appveyor.com/project/logue/wpftemplate)
 
-This is MahApps WPF template based on SurfLapras's tempate.
+This is MahApps WPF template based on finphie's tempate.
 
 ## Description
 
@@ -39,7 +39,7 @@ In making this template [PrismMahAppsSample](https://github.com/steve600/PrismMa
 ## Author
 
 [@logue256](https://twitter.com/logue256)
-[@_SurfLapras](https://twitter.com/_SurfLapras)
+[@finphie](https://twitter.com/finphie)
 
 ## License
 

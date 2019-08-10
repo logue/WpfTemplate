@@ -4,7 +4,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/fgo43rccop7sevjt?svg=true)](https://ci.appveyor.com/project/logue/wpftemplate)
 
-SurfLapras氏のテンプレートをベースに色々拡張したMVVMなWPFアプリケーションのテンプレートです。
+finphie氏のテンプレートをベースに色々拡張したMVVMなWPFアプリケーションのテンプレートです。
 
 ## 説明
 
@@ -38,7 +38,7 @@ PrismやUnity、MahAppsを利用したMVVM開発を行う際のテンプレー�
 ## 作者
 
 [@logue256](https://twitter.com/logue256)
-[@_SurfLapras](https://twitter.com/_SurfLapras)
+[@finphie](https://twitter.com/finphie)
 
 ## ライセンス
 
